@@ -1,9 +1,9 @@
 RemoteSystemsTempFiles
 /aplos/target/*
-.metadata
-.settings
-.DS_Store
-.classpath
-.project
+/aplos/.metadata
+/aplos/.settings
+/aplos/.DS_Store
+/aplos/.classpath
+/aplos/.project
 
 # aplos
