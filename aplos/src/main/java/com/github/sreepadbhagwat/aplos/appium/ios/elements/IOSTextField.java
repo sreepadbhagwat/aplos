@@ -1,21 +1,22 @@
 package com.github.sreepadbhagwat.aplos.appium.ios.elements;
 
+import org.openqa.selenium.By;
+
+import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
+import com.github.sreepadbhagwat.aplos.appium.ios.AplosElement;
+
 public class IOSTextField implements com.github.sreepadbhagwat.aplos.api.TextField {
 
-	public String getText() {
-		// TODO Auto-generated method stub
-		System.out.println("inside TextField.gettext method");
-
-		return null;
+	public String getText(String identifier, String locator) {
+		return AplosElement.element(identifier,locator).getText();
 	}
 
-	public void setText(String text) {
-		System.out.println("inside TextField.setText method");
+
+	@Override
+	public void setText(String identifier, String locator, String text) {
 		System.out.println(text);
-
-
-		// TODO Auto-generated method stub
-
+		//AplosElement.element(identifier,locator).sendKeys(text);
+		AplosDriver.driver.findElement(By.xpath(locator)).sendKeys(text);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.github.sreepadbhagwat.aplos.appium;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.ios.IOSDriver;
@@ -37,6 +38,7 @@ public class AplosDriver {
 }
   
   public IOSDriver<IOSElement> getDriver() {
+
 	  return driver;
   }
   
