@@ -1,22 +1,26 @@
 package com.github.sreepadbhagwat.aplos.appium.ios.elements;
 
-import org.openqa.selenium.By;
-
+import com.github.sreepadbhagwat.aplos.api.TextField;
 import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
 import com.github.sreepadbhagwat.aplos.appium.ios.AplosElement;
 
-public class IOSTextField implements com.github.sreepadbhagwat.aplos.api.TextField {
+public final class IOSTextField extends GenericElements  implements TextField {
 
-	public String getText(String identifier, String locator) {
-		return AplosElement.element(identifier,locator).getText();
+	public IOSTextField(AplosDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public final String getText(String identifier, String locator) {
+		return null;
+				//AplosElement.findelement(identifier,locator).getText();
 	}
 
 
 	@Override
-	public void setText(String identifier, String locator, String text) {
-		System.out.println(text);
-		//AplosElement.element(identifier,locator).sendKeys(text);
-		AplosDriver.driver.findElement(By.xpath(locator)).sendKeys(text);
+	public final void setText(String identifier, String locator, String text) {
+		//AplosElement.findelement(identifier,locator).sendKeys(text);
 	}
 
 }

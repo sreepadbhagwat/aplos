@@ -23,6 +23,7 @@ public class Caps{
     public Caps(){
     	try {
     		File a = new File("appium.json");
+    		///aplos/src/main/java/com/github/sreepadbhagwat/aplos/appium/appium.json
     		capreadDataMap = mapper.readValue(a, Map.class);
     		} catch (JsonParseException e) {
     			e.printStackTrace();

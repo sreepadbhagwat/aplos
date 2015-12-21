@@ -1,47 +1,43 @@
 package com.github.sreepadbhagwat.aplos.appium.ios;
 
-
-
-import java.sql.Timestamp;
-
 import com.github.sreepadbhagwat.aplos.api.AplosAppium;
-import com.github.sreepadbhagwat.aplos.api.Button;
+import com.github.sreepadbhagwat.aplos.api.AplosDriverI;
+import com.github.sreepadbhagwat.aplos.api.IButton;
 import com.github.sreepadbhagwat.aplos.api.Text;
 import com.github.sreepadbhagwat.aplos.api.TextField;
-import com.github.sreepadbhagwat.aplos.appium.Caps;
-import com.github.sreepadbhagwat.aplos.appium.ios.elements.IOSButton;
 import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
+import com.github.sreepadbhagwat.aplos.appium.ios.elements.GenericElements;
+import com.github.sreepadbhagwat.aplos.appium.ios.elements.IOSButton;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
 public class AplosAppiumIOS implements AplosAppium {
 
-	Caps caps = new Caps();
-	Button button;
-	Text text;
-	TextField textfield;
-	static AplosDriver ad;
+	private IButton button;
+	private Text text;
+	private TextField textfield;
+	private AplosDriver aplosdriver;
+	private GenericElements ge;
 
-public AplosAppiumIOS(){
-	ad = new AplosDriver();	
+	public AplosAppiumIOS(){
+		aplosdriver = new AplosDriver();	
+		ge=new GenericElements(aplosdriver);
+	    button=new IOSButton(aplosdriver);
+	}
 	
-}
-	
-public static IOSDriver<IOSElement> getDriver() {
-	
-	return ad.getDriver();
-}
+	public void createDriver(){
+		
+	}
+	public void startDriver(){
+		aplosdriver.startDriver();
+	}
 
-public void startDriver(){
-	ad.startDriver();
-}
-
-public void quitDriver(){
-	ad.quitDriver();
-}
-	public Button button() {
-		button = new IOSButton(); 
+	public void quitDriver(){
+		aplosdriver.quitDriver();
+	}
+	
+	public IButton button() {
 		return button;	
 	}
 	
@@ -52,10 +48,6 @@ public void quitDriver(){
 	public TextField textfield() {		
 		return textfield;
 	}
-
 	
 	
-
-	
-
 }
