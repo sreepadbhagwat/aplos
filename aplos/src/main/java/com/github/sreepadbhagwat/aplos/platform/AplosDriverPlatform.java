@@ -5,9 +5,9 @@ import com.github.sreepadbhagwat.aplos.api.AplosAppium;
 public class AplosDriverPlatform {
 	
 	public static AplosAppium loadPlatform(String platformName){
-		Platform service= PlatformLocator.getService(platformName);
-		AplosAppium obj=service.getPlatform();
-		return obj;
+		Platform platform= PlatformLocator.getPlatform(platformName);
+		AplosAppium aplosappium=platform.getPlatform();
+		return aplosappium;
 	}
 
 }

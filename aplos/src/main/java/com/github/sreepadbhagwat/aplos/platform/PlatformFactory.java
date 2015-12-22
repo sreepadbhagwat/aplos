@@ -1,12 +1,14 @@
 package com.github.sreepadbhagwat.aplos.platform;
 
-public class PlatformContext {
+import com.github.sreepadbhagwat.aplos.api.AplosAppium;
+
+public class PlatformFactory {
 	
-	public Object lookup(String platform){
+	public Platform getPlatformInstance(String platform){
 		if (platform.equalsIgnoreCase(PlatformConst.IOS.getValue()))
-			return new AppiumIOSService();
+			return  new AppiumIOSService();
 		else if (platform.equalsIgnoreCase(PlatformConst.ANDROID.getValue()))
-			return new AppiumAndService();	
+			return  new AppiumAndService();	
 		else
 			return null;
 	}

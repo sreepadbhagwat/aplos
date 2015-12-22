@@ -8,16 +8,19 @@ public class PlatformLocator {
 	      platformcache = new PlatformCache();		
 	   }
 	
-	public static Platform getService(String toolName){
-		Platform service = platformcache.getPlatform(toolName);
+	public static Platform getPlatform(String toolName){
+		Platform platform_in_cache = platformcache.getPlatform(toolName);
 		
-		if (service!=null){
-			return service;
+		if (platform_in_cache!=null){
+			System.out.println("service is not equal to null");
+			return platform_in_cache;
 		}
 		
-		PlatformContext context = new PlatformContext();
-		Platform service1 = (Platform)context.lookup(toolName);
-		return service1;
+		System.out.println("creating new service");
+		PlatformFactory platformfactory = new PlatformFactory();
+		Platform platform = (Platform)platformfactory.getPlatformInstance(toolName);
+		platformcache.addPlatform(platform);
+		return platform;
 		
 	}
 
