@@ -1,5 +1,14 @@
 package com.github.sreepadbhagwat.aplos.appium.ios.elements;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+
 import com.github.sreepadbhagwat.aplos.api.AplosDriverI;
 import com.github.sreepadbhagwat.aplos.api.Driver;
 import com.github.sreepadbhagwat.aplos.appium.AplosIOSDriver;
@@ -21,8 +30,10 @@ public class GenericElements {
 		return driver.getDriver();
 	}
 	
-	public IOSElement findElementByName(String locator){
+	public WebElement findElementByName(String locator){
 		return getDriver().findElementByName(locator);	
 	}
+	
+	
 
 }
