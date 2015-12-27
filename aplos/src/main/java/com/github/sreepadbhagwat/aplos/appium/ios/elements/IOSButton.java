@@ -4,13 +4,13 @@ package com.github.sreepadbhagwat.aplos.appium.ios.elements;
 
 
 import com.github.sreepadbhagwat.aplos.api.IButton;
-import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
+import com.github.sreepadbhagwat.aplos.appium.AplosIOSDriver;
 import com.github.sreepadbhagwat.aplos.appium.ios.AplosElement;
 
 
 public class IOSButton extends GenericElements implements IButton {
 
-	public IOSButton(AplosDriver driver) {
+	public IOSButton(AplosIOSDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

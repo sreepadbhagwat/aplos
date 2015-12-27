@@ -1,34 +1,41 @@
 package com.github.sreepadbhagwat.aplos.appium.ios;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import com.github.sreepadbhagwat.aplos.api.AplosAppium;
-import com.github.sreepadbhagwat.aplos.api.AplosDriverI;
 import com.github.sreepadbhagwat.aplos.api.IButton;
 import com.github.sreepadbhagwat.aplos.api.Text;
 import com.github.sreepadbhagwat.aplos.api.TextField;
-import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
+import com.github.sreepadbhagwat.aplos.appium.AplosIOSDriver;
+import com.github.sreepadbhagwat.aplos.appium.Caps;
 import com.github.sreepadbhagwat.aplos.appium.ios.elements.GenericElements;
 import com.github.sreepadbhagwat.aplos.appium.ios.elements.IOSButton;
 
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+
 
 public class AplosAppiumIOS implements AplosAppium {
 
 	private IButton button;
 	private Text text;
 	private TextField textfield;
-	private AplosDriver aplosdriver;
+	private AplosIOSDriver aplosdriver;
 	private GenericElements ge;
-
+	DesiredCapabilities desiredCapabilities;
+	
 	public AplosAppiumIOS(){
-		aplosdriver = new AplosDriver();	
+		
+			aplosdriver = new AplosIOSDriver();
+	
 		ge=new GenericElements(aplosdriver);
 	    button=new IOSButton(aplosdriver);
 	}
 	
-	public void createDriver(){
-		
-	}
+	
 	public void startDriver(){
 		aplosdriver.startDriver();
 	}
@@ -36,6 +43,8 @@ public class AplosAppiumIOS implements AplosAppium {
 	public void quitDriver(){
 		aplosdriver.quitDriver();
 	}
+	
+	
 	
 	public IButton button() {
 		return button;	
@@ -48,6 +57,9 @@ public class AplosAppiumIOS implements AplosAppium {
 	public TextField textfield() {		
 		return textfield;
 	}
+	
+	
+	
 	
 	
 }

@@ -8,7 +8,7 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.github.sreepadbhagwat.aplos.appium.AplosDriver;
+import com.github.sreepadbhagwat.aplos.appium.AplosIOSDriver;
 import com.github.sreepadbhagwat.aplos.appium.ios.AplosAppiumIOS;
 import com.github.sreepadbhagwat.aplos.appium.ios.AplosElement;
 
