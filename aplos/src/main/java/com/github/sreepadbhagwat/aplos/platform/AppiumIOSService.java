@@ -4,7 +4,6 @@ import com.github.sreepadbhagwat.aplos.api.AplosAppium;
 import com.github.sreepadbhagwat.aplos.appium.ios.AplosAppiumIOS;
 
 
-@SuppressWarnings("hiding")
 public class AppiumIOSService<AplosAppium> implements Platform{
 
 	

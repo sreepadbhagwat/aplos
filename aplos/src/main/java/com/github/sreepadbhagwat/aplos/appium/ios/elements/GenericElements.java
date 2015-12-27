@@ -22,9 +22,9 @@ public class GenericElements {
   AplosIOSDriver driver;
 
 	public GenericElements(AplosIOSDriver driver){
-		this.driver=driver;
-		
+		this.driver=driver;		
 	}
+	
 	public IOSDriver<IOSElement> getDriver() {
 		// TODO Auto-generated method stub
 		return driver.getDriver();
