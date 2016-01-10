@@ -14,7 +14,7 @@ public class AppiumIOSService<AplosAppium> implements Platform{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		System.out.println("getname inside appium service");
+		//System.out.println("getname inside appium service");
 		return "IOS";
 	}
 

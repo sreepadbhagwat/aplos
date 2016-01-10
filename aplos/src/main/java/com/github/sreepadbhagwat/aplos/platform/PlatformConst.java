@@ -15,3 +15,5 @@ public enum PlatformConst {
 	}
 // use Sample[] sample = sample.values() to get this in an array
 }
+
+

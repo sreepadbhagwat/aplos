@@ -16,7 +16,7 @@ public class IOSButton extends GenericElements implements IButton {
 	}
 
 	public void click(String identifier, String locator) {
-		findElementByName(locator).click();
+		execute(identifier,locator).click();
 		}
 	
 }
